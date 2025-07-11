@@ -34,6 +34,10 @@ const getDetails = () => {
     return;
   }
 
+    if (res.status === 429) {
+  alert("Daily limit exceeded. Try again tomorrow.");
+    }
+
     if (!data.data) {
     alert("Invalid response from TikTok. Please check the video link.");
     return;
@@ -77,8 +81,8 @@ const getDetails = () => {
        </div>
        
        <div data-aos="fade-up" class="downloads">
-         <button onclick="downloadFile('${data.data.play}', 'tokVideo.mp4')"  data-aos="fade-up" id="mark"><i class="fa-solid fa-file-video"></i> Download Video With Watermark </button>
-         <button onclick="downloadFile( '${data.data.wmplay}','WtokVideo.mp4')" data-aos="fade-up" id="wmark"><i class="fa-solid fa-video"></i> Download Video Without Watermark</button>
+         <button onclick="downloadFile('${data.data.wmplay}', 'tokVideo.mp4')"  data-aos="fade-up" id="mark"><i class="fa-solid fa-file-video"></i> Download Video With Watermark </button>
+         <button onclick="downloadFile( '${data.data.play}','WtokVideo.mp4')" data-aos="fade-up" id="wmark"><i class="fa-solid fa-video"></i> Download Video Without Watermark</button>
        </div>
        <div><p id="process"><i class="fa-solid fa-gauge-high"></i> Processing Time: ${Math.round(data.processed_time)} seconds</p></div>
       <div>
@@ -88,10 +92,12 @@ const getDetails = () => {
   
 	})
 	.catch(err => {
-     console.error("Error", err);
-alert("Something went wrong. Try again.");
-     resultPage.removeChild(spinner);
-	})
+  console.error("Error", err);
+  alert("Something went wrong. Try again.");
+  if (resultPage.contains(spinner)) {
+    resultPage.removeChild(spinner);
+  }
+})
   
   };
   
