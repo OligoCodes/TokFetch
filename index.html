@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header> <i id="logo" class="fa-brands fa-tiktok"></i> <h1><span class="tok">Tok</span><span class="fetch">Fetch</span></h1></header>
+  
+
+  
+  <div class="engine">
+     <div class="query">
+        <h2 class="welcome"> <i class="fa-solid fa-door-open"></i> Welcome to <span class="tok">Tok</span><span class="fetch">Fetch</span></h2>
+       <p class="intro">
+              Download TikToks your way!<br>Videos, audios, stats. Fast. Clean. No water, no watermark.
+       </p>
+       
+       <p class="intro">
+         <i class="fa-solid fa-clipboard"></i> Paste your link (URL) <i class="fa-solid fa-link"></i> into the input field, then tap “Fetch Video Info” below to proceed <i class="fa-solid fa-down-long"></i> .
+       </p>
+       <div class="info">
+          <input type="text" id="link" placeholder="https://vm.tiktok.com/...">
+          <button onclick="getDetails()" id="test"> <i class="fa-solid fa-cloud-arrow-down"></i> Fetch Video Info </button>
+       </div>
+     </div>
+  
+    <div class="results">
+      
+    </div>
+  
+  <div class="importance">
+    <h2 data-aos="fade-up" class="welcome"> <i class="fa-solid fa-star"></i> Why Use <span class="tok">Tok</span><span class="fetch">Fetch</span>?</h2>
+    
+    <div data-aos="fade-up" class="usecase">
+      <div class="icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+      <div class="text">
+        <h2>Flexible Downloads</h2>
+        <p>Save TikTok videos in your preferred format , with watermark for credit or clean without it for reuse.</p>
+      </div>
+    </div>
+    
+    <div data-aos="fade-up" class="usecase">
+      <div class="icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+      <div class="text">
+        <h2>Fast Processing</h2>
+        <p>No need to wait around , videos and audio are processed and ready in just seconds.</p>
+      </div>
+    </div>
+    
+    <div data-aos="fade-up" class="usecase">
+      <div id="stubborn" class="icon"> <i class="fa-solid fa-headphones"></i> </div>
+      <div class="text">
+         <h2>Audio Saver</h2>
+         </p>Easily extract and download audio from any TikTok for music, sound effects, or remixes.</p>
+      </div>
+    </div>
+    
+    <div data-aos="fade-up" class="usecase">
+      <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="text">
+        <h2>Privacy First</h2>
+        <p>No sign-ups, no tracking , we don’t store your data or history. Your activity stays private.</p>
+      </div>
+    </div>
+    
+    <div data-aos="fade-up" class="usecase">
+      <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <div class="text">
+        <h2>Quick Insights</h2>
+        <p>View basic video details like views, duration, and comments before downloading , all at a glance</p>
+      </div>
+    </div>
+  </div>
+  
+<footer style="text-align: center; padding: 1rem; font-size: 0.9rem;">
+  <p id="acknowledge">
+    &copy; 2025 OligoTech. Developed with 
+    <span style="color: #FE2C55;">
+      <i class="fa-solid fa-heart"></i>
+    </span> 
+    by Joseph Bonsu 🇬🇭
+  </p>
+
+  <p style="margin-top: 0.5rem;">
+    <strong>Disclaimer:</strong> This tool is for personal use only. Downloaded videos remain the property of their original creators.
+  </p>
+
+  <p>
+    We are <strong>not affiliated</strong> with TikTok. Respect copyright and community guidelines.
+  </p>
+
+  <div class="handles">
+    <a href="https://oligotech
+    vercel.app" target="_blank" style="margin-right: 10px;"> <i class="fa-solid fa-user-tie"></i> </a>
+    <a href="https://discord.gg/MdAWE4gg"> <i class="fa-brands fa-discord"></i> </a>
+    <a href="https://wa.me/+233551448745"> <i class="fa-brands fa-whatsapp"></i> </a>
+    <a href="https://github.com/oligocodes" target="_blank" style="margin: 0 10px;"> <i class="fa-brands fa-github"></i> </a>
+    <a href="mailto:josephoseibonsu742@gmail.com"> <i class="fa-solid fa-envelope-open-text"></i> </a>
+  </div>
+</footer>
+     
+  <!-- Project -->
+  <script src="main.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
+</body>
+</html>
