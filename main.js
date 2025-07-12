@@ -110,8 +110,8 @@ const getDetails = () => {
 // Helper: Download file from URL
 function downloadFile(url, filename) {
   const a = document.createElement('a');
-  a.href = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
-  a.download = filename; // optional — just in case
+  a.href = `https://tokfetch-backend.onrender.com/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
+  a.download = filename;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
