@@ -110,9 +110,8 @@ const getDetails = () => {
 // Helper: Download file from URL
 function downloadFile(url, filename) {
   const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.style.display = "none";
+  a.href = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
+  a.download = filename; // optional — just in case
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
